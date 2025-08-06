@@ -167,6 +167,72 @@
             margin-bottom: 15px;
             color: var(--gold-accent);
         }
+
+        /* Results Section */
+        .results {
+            padding: 80px 0;
+            background-color: var(--darker-bg);
+        }
+
+        .chart-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .client-chart {
+            background: var(--accent-dark);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .client-chart:hover {
+            transform: translateY(-5px);
+        }
+
+        .chart {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: 20px auto;
+        }
+
+        .chart-svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .circle-bg {
+            fill: none;
+            stroke: #2d3748;
+            stroke-width: 3;
+        }
+
+        .circle-fill {
+            fill: none;
+            stroke: var(--gold-accent);
+            stroke-width: 3;
+            stroke-linecap: round;
+            animation: circle-fill-animation 1.5s ease-in-out forwards;
+        }
+
+        .chart-value {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-light);
+        }
+
+        @keyframes circle-fill-animation {
+            0% { stroke-dasharray: 0, 100; }
+            100% { stroke-dasharray: var(--end-value), 100; }
+        }
         
         /* Responsive */
         @media (max-width: 768px) {
@@ -189,7 +255,7 @@
             <nav>
                 <ul style="display: flex; list-style: none; gap: 20px;">
                     <li><a href="#" style="color: var(--text-light); text-decoration: none;">Home</a></li>
-                    <li><a href="#" style="color: var(--text-light); text-decoration: none;">Contato</a></li>
+                    <li><a href="mailto:agencia.news17@gmail.com?subject=Contato%20XPE%20Marketing&body=Olá,%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços" style="color: var(--text-light); text-decoration: none;">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -200,7 +266,7 @@
             <div class="hero-content">
                 <h1>Marketing Digital de Alto Impacto</h1>
                 <p>Potencializamos marcas com estratégias digitais premium e resultados mensuráveis. A experiência do cliente no centro de tudo.</p>
-                <a href="#" class="btn">Fale com nossos especialistas</a>
+                <a href="mailto:agencia.news17@gmail.com?subject=Contato%20XPE%20Marketing&body=Olá,%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços" class="btn">Fale com nossos especialistas</a>
             </div>
         </div>
     </section>
@@ -230,6 +296,54 @@
             </div>
         </div>
     </section>
+
+    <!-- Seção de Resultados -->
+    <section class="results">
+        <div class="container">
+            <h2 style="text-align: center; color: var(--gold-accent); margin-bottom: 40px;">Resultados Comprovados</h2>
+            
+            <div class="chart-container">
+                <!-- Cliente 1 -->
+                <div class="client-chart">
+                    <h3>Cliente A (E-commerce)</h3>
+                    <div class="chart" data-percent="78">
+                        <svg class="chart-svg" viewBox="0 0 36 36">
+                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="circle-fill" stroke-dasharray="78, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                        </svg>
+                        <span class="chart-value">78%</span>
+                    </div>
+                    <p>Aumento em conversões</p>
+                </div>
+                
+                <!-- Cliente 2 -->
+                <div class="client-chart">
+                    <h3>Cliente B (Serviços)</h3>
+                    <div class="chart" data-percent="145">
+                        <svg class="chart-svg" viewBox="0 0 36 36">
+                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="circle-fill" stroke-dasharray="145, 200" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                        </svg>
+                        <span class="chart-value">145%</span>
+                    </div>
+                    <p>Crescimento em leads</p>
+                </div>
+                
+                <!-- Cliente 3 -->
+                <div class="client-chart">
+                    <h3>Cliente C (Marca Pessoal)</h3>
+                    <div class="chart" data-percent="210">
+                        <svg class="chart-svg" viewBox="0 0 36 36">
+                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="circle-fill" stroke-dasharray="210, 300" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                        </svg>
+                        <span class="chart-value">210%</span>
+                    </div>
+                    <p>Alcance orgânico</p>
+                </div>
+            </div>
+        </div>
+    </section>
     
     <footer style="background-color: var(--darker-bg); padding: 50px 0; text-align: center;">
         <div class="container">
@@ -238,5 +352,25 @@
             <p style="color: var(--text-gray);">© 2023 Xperience Marketing. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <script>
+        // Animação dos gráficos
+        document.addEventListener('DOMContentLoaded', function() {
+            const charts = document.querySelectorAll('.chart');
+            
+            charts.forEach(chart => {
+                const percent = chart.getAttribute('data-percent');
+                const circleFill = chart.querySelector('.circle-fill');
+                
+                // Calcula o valor final para a animação
+                const maxValue = percent > 100 ? (Math.ceil(percent/100) * 100) : 100;
+                const endValue = (percent / maxValue) * 100;
+                
+                // Define a animação
+                circleFill.style.setProperty('--end-value', endValue);
+                chart.querySelector('.chart-value').textContent = `${percent}%`;
+            });
+        });
+    </script>
 </body>
 </html>
