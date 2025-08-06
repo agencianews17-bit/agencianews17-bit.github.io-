@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xperience Marketing | XPE</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+    <style>
+        :root {
+            --dark-bg: #121212;
+            --darker-bg: #0a0a0a;
+            --accent-dark: #1a1a1a;
+            --xpe-gray: #6b7280;
+            --xpe-metal: linear-gradient(135deg, #4b5563 0%, #6b7280 50%, #4b5563 100%);
+            --gold-accent: #d4af37;
+            --text-light: #e5e7eb;
+            --text-gray: #9ca3af;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--darker-bg);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-text {
+            background: var(--xpe-metal);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .logo-accent {
+            color: var(--gold-accent);
+            font-weight: 300;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 600px;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--text-light), var(--gold-accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--gold-accent);
+            color: var(--darker-bg);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background-color: var(--accent-dark);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--gold-accent);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: var(--darker-bg);
+            padding: 30px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            border-left: 3px solid var(--gold-accent);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--gold-accent);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .logo-text {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1 class="logo-text">XPERIENCE<span class="logo-accent">XPE</span></h1>
+            </div>
+            <nav>
+                <ul style="display: flex; list-style: none; gap: 20px;">
+                    <li><a href="#" style="color: var(--text-light); text-decoration: none;">Home</a></li>
+                    <li><a href="#" style="color: var(--text-light); text-decoration: none;">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Marketing Digital de Alto Impacto</h1>
+                <p>Potencializamos marcas com estratégias digitais premium e resultados mensuráveis. A experiência do cliente no centro de tudo.</p>
+                <a href="#" class="btn">Fale com nossos especialistas</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossos Serviços Exclusivos</h2>
+                <p>Soluções personalizadas para alavancar sua presença digital e gerar resultados tangíveis</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Estratégia de Marca</h3>
+                    <p>Desenvolvimento de identidade visual e posicionamento estratégico para destacar sua marca no mercado.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Performance Marketing</h3>
+                    <p>Campanhas digitais com foco em ROI, utilizando as melhores plataformas e tecnologias do mercado.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Conteúdo Premium</h3>
+                    <p>Criação de conteúdo relevante e engajador, distribuído nos canais mais eficientes para seu público.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer style="background-color: var(--darker-bg); padding: 50px 0; text-align: center;">
+        <div class="container">
+            <h3 class="logo-text">XPERIENCE<span class="logo-accent">XPE</span></h3>
+            <p style="color: var(--text-gray); margin: 20px 0;">Transformando visões em experiências digitais memoráveis</p>
+            <p style="color: var(--text-gray);">© 2023 Xperience Marketing. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
